@@ -1,0 +1,19 @@
+{
+  "name": "terem-foosball-dashboard",
+  "version": "1.0.0",
+  "description": "The foosball ranking system is developed for terem technology recruitment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(git://github.com/LaughingKids/terem-foosball-dashboard.git)"
+  },
+  "keywords": [
+    "react",
+    "nodejs"
+  ],
+  "author": "Thomas Xiaojie Wang",
+  "license": "MIT"
+}
