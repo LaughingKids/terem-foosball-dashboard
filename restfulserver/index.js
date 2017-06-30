@@ -21,7 +21,10 @@ app.use(express.static(path.join(__dirname,'../public_html')));
 // loading routes
 const clientAppRouter = require('./routes/index');
 const matchesAPIRoutes = require('./routes/matches');
+const playersAPIRoutes = require('./routes/players');
 
 app.use('/api/matches',matchesAPIRoutes);
+app.use('/api/players',playersAPIRoutes);
+app.use('/api*',clientAppRouter);
 
 module.exports = app;
