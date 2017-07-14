@@ -25,11 +25,11 @@ matchesAPIRouter.get('/score',function(req,res,next){
 });
 
 matchesAPIRouter.get('/:id',function(req,res,next){
-  let findMatch = Matches.findById(req.params.id).exec();
+  var findMatch = Matches.findById(req.params.id).exec();
   findMatch.then((match,err)=>{
       if(err) return next(err);
       /* update user record when a match created */
-      let playerInMatch = new Array();
+      var playerInMatch = new Array();
       match.guestTeamMember.map((player,idx)=>{
         playerInMatch.push(player);
       });

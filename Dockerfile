@@ -1,12 +1,19 @@
-FROM node:boron
+FROM node:4.2
+MAINTAINER tribou
 
+# Prepare app directory
 RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+ADD . /usr/src/app
 
-COPY package.json /usr/src/app
+# Install dependencies
+WORKDIR /usr/src/app
 RUN npm install
 
-COPY . /usr/src/app
+# Build the app
+RUN npm build
+
+# Expose the app port
 EXPOSE 8086
 
-CMD ["npm","start"]
+# Start the app
+CMD npm start

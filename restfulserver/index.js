@@ -8,9 +8,11 @@ const logger = require('logger');
 // import mongo db
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/teremfoosballdashboard")
-        .then(() => console.log('teremfoosballdashboard connection successful'))
-        .catch((err)=> console.error(err));
+mongoose.connect("mongodb://localhost/teremfoosballdashboard",{
+					userMongoClient: true,
+				})
+        		.then(() => console.log('teremfoosballdashboard connection successful'))
+        		.catch((err)=> console.error(err));
 
 // create server application
 var app = express();

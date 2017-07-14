@@ -1,0 +1,6 @@
+FROM dashboard
+
+ADD . /usr/src/app
+#RUN npm build
+CMD npm dev
+
